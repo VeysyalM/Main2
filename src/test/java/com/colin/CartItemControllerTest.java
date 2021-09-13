@@ -87,7 +87,7 @@ public class CartItemControllerTest {
 		
 	}
 	
-	@Test
+	/*@Test
 	public void testGetAllProducts() throws Exception {
 		ArrayList<CartItem> cartItems = new ArrayList<>();
 		Category c = new Category(1, "Dairy", new ArrayList<>());
@@ -110,7 +110,7 @@ public class CartItemControllerTest {
 				.andExpect(jsonPath("$[0].product.quantity").value(3))
 				.andExpect(jsonPath("$[0].product.price").value(2.99))
 				.andExpect(jsonPath("$[0].quantity").value(2));
-	}
+	}*/
 	
 	@Test
 	void addNewCartItem() throws Exception {
