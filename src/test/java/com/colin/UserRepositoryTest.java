@@ -38,7 +38,6 @@ public class UserRepositoryTest {
 		BCryptPasswordEncoder b = new BCryptPasswordEncoder();
 		String encryptP = b.encode(u.getPassword());
 		u.setPassword(encryptP);
-
 		User u2 = userRepository.save(u);
 		assertNotNull(u2);
 		assertTrue(u.getUsername().equals(u2.getUsername()));
