@@ -51,20 +51,16 @@ class SpringCrudIntegrationTests {
 		categoryRepository.save(category);
 		productRepository.save(product);
 	}
-
 	@Test
 	void givenProduct_whenGetAllProducts_thenStatus200() throws Exception {
-
 		//Category category = new Category(1, "Dairy", new ArrayList<>());
 		//Product product = new Product(1, "Milk", 3, 2.99, category, new ArrayList<>());
 		//category.addProduct(product);
 		//categoryRepository.save(category);
 		//productRepository.save(product);
-
 		mvc.perform(MockMvcRequestBuilders.get("/api/products"))
 		.andExpect(MockMvcResultMatchers.status().isOk())
 		.andDo(MockMvcResultHandlers.print());
-
 	}
 	
 	@Test
