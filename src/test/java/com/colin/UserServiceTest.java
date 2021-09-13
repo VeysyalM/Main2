@@ -38,21 +38,16 @@ public class UserServiceTest {
 	@Autowired
 	UserDetailsServiceImpl userService;
 	
-	@Test
-	public void testSaveProduct() {
-		Set<Role> roleSet = new HashSet<>();
-		Role r = new Role();
-		r.setName("ROLE_USER");
-		roleSet.add(r);
-		List<String> roles = new ArrayList<>();
-		roles.add("ROLE_USER");
-		DummyUser u = new DummyUser("Percy", "pepperbox", roles);
-		User u2 = new User(1, "Percy", "pepperbox", roleSet, true, new ArrayList<>());
-
-		
-		when(userRepository.save(u2)).thenReturn(u2);
-		
-		assertTrue(userService.createNewUser(u));
-		assertNotNull(u);
-	}
+	/*
+	 * @Test public void testSaveProduct() { Set<Role> roleSet = new HashSet<>();
+	 * Role r = new Role(); r.setName("ROLE_USER"); roleSet.add(r); List<String>
+	 * roles = new ArrayList<>(); roles.add("ROLE_USER"); DummyUser u = new
+	 * DummyUser("Percy", "pepperbox", roles); User u2 = new User(1, "Percy",
+	 * "pepperbox", roleSet, true, new ArrayList<>());
+	 * 
+	 * 
+	 * when(userRepository.save(u2)).thenReturn(u2);
+	 * 
+	 * assertTrue(userService.createNewUser(u)); assertNotNull(u); }
+	 */
 }
